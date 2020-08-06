@@ -21,7 +21,9 @@ int getRPM{
   int repeatVal = 0;
   while(timer - preTimer < 60000){
     repeatVal++;
+    while(!digitalRead(laserSensor));
     timer = millis();
+    while(digitalRead(laserSensor));
   }
   return repeatVal/5;
 }
