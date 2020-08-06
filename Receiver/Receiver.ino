@@ -9,5 +9,5 @@ void setup(){
 
 void main(){
   while(Serial.available()) Serial.print(BT.read());
-  println("\n");
+  Serial.println("\n");
 }
